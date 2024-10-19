@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Animation</title>
+    <link rel="stylesheet" href="heart.css">
+</head>
+<body>
+
+<div class="container">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 269 264" style="enable-background:new 0 0 269 264;" xml:space="preserve">
+        <style type="text/css">
+            .st1 { fill: #9BB133; }
+            .st2 { fill: #E7E43B; }
+            .st3 { fill: #6BABBD; }
+            .st4 { fill: #38B133; }
+            .st5 { fill: #E03BE7; }
+            .st6 { fill: #E9ACC1; }
+            .st7 { fill: #F04151; }
+            .st8 { fill: #13414C; }
+            .st9 { font-family: 'Montserrat-Regular'; }
+            .st10 { font-size: 23.9043px; }
+        </style>
+        <g>
+            <!-- Particles and other elements -->
+            <!-- You can add other particle paths here, keeping the structure as needed -->
+        </g>
+        <g id="Circle">
+            <circle cx="134.7" cy="131.1" r="52"/>
+        </g>
+        <path id="Heart_2_" class="st7" d="M131.9,110.7c-6.8-6.3-17.4-6-23.7,0.8c-6.3,6.8-6,17.4,0.8,23.7l14.4,13.5l11.5,10.7l11.5-10.7
+        l14.4-13.5c6.8-6.3,7.1-16.9,0.8-23.7c-6.3-6.8-16.9-7.1-23.7-0.8l-2.9,2.7"/>
+    </svg>
+    <h1 id="Thanks">Click!</h1>
+</div>
+
+<!-- JavaScript to handle click events -->
+<script>
+    document.getElementById("Heart_2_").addEventListener("click", function() {
+        // Replay animation
+        const heart = document.getElementById("Heart_2_");
+        heart.style.animation = "none"; // Reset animation
+        heart.offsetHeight; // Trigger a reflow, allowing the animation to restart
+        heart.style.animation = ""; // Reapply animation
+
+        // Optionally add redirection
+        setTimeout(() => {
+            window.location.href = "http://127.0.0.1:3000/love-add3.html"; // Change to your desired URL
+        }, 1800); // Adjust delay to match your animation duration (1.8 seconds)
+    });
+</script>
+
+</body>
+</html>
