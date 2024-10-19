@@ -9,7 +9,7 @@ function addListener() {
     container.parentNode.replaceChild(newContainer, container);
     addListener();
   }
-  
+
   addListener();
   
   <script>
